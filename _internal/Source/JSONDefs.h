@@ -82,7 +82,7 @@
 		#define JSON_FLOAT_THRESHHOLD 0.00001f
 	#else
 		typedef double json_number;
-		#define JSON_FLOAT_THRESHHOLD 0.00001
+		#define JSON_FLOAT_THRESHHOLD 0.000001
 	#endif
 #endif
 
