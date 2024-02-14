@@ -54,8 +54,15 @@
 	   #define json_cold
     #endif
 
+
+
+#if __cplusplus >= 201703L
+    #define json_nothrow noexcept(true)
+    #define json_throws(x) noexcept(false)
+#else
     #define json_nothrow throw()
     #define json_throws(x) throw(x)
+#endif
 
     #ifdef JSON_LESS_MEMORY
 	   #define PACKED(x) :x __attribute__ ((packed))
